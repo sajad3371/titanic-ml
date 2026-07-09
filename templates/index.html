@@ -1,0 +1,24 @@
+@app.route("/")
+def home():
+    return """
+    <!DOCTYPE html>
+    <html>
+    <head><title>Titanic</title></head>
+    <body>
+        <h1>Titanic Prediction</h1>
+        <form action="/predict_form" method="POST">
+            <label>Pclass:</label>
+            <input type="number" name="pclass"><br><br>
+            <label>Age:</label>
+            <input type="number" name="age"><br><br>
+            <label>Fare:</label>
+            <input type="number" name="fare"><br><br>
+            <label>Sex (0=male, 1=female):</label>
+            <input type="number" name="sex"><br><br>
+            <label>SibSp:</label>
+            <input type="number" name="sibsp"><br><br>
+            <input type="submit" value="Predict">
+        </form>
+    </body>
+    </html>
+    """
